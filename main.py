@@ -15,7 +15,7 @@ async def main():
             # Ожидаем видимости элемента
             await page.wait_for_selector('#content > div > section > div.row.download-list-widget > ol')
 
-            # Извлекаем данные из таблицы с использованием page.evaluate
+            # Извлекаем данные из таблицы
             data = await page.evaluate('''
                 () => {
                     const items = document.querySelectorAll('#content > div > section > div.row.download-list-widget > ol > li');
@@ -30,7 +30,7 @@ async def main():
                 }
             ''')
 
-            # Записываем данные в Excel без использования pandas
+            # Записываем данные в Excel
             wb = Workbook()
             ws = wb.active
             ws.append(['Release version', 'Release date', 'Download', 'Release Notes'])
