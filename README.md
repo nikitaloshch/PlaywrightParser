@@ -1,3 +1,5 @@
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+
 # PlaywrightParser
 
 Это парсер на Python использует Playwright для сбора всех версий, дат релиза, и ссылок на скачивание и инфо о них.
